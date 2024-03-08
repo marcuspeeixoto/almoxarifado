@@ -28,24 +28,35 @@
                 <table class="table-auto w-full">
                     <thead class="bg-gray-100 text-left">
                         <tr>
-                            <th class="p-2"></th> 
                             <th class="p-2">Nome</th>
-                            <th class="p-2"></th> 
                             <th class="p-2">Quantidade</th>
+                            <th class="p-2">Preço</th>
+                            <th class="p-2">Marca</th>
+                            <th class="p-2">Fornecedor</th>
+                            <th class="p-2">Categoria</th>
+                            <th class="p-2">Data de Validade</th>
+                            <th class="p-2">Código de Barras</th>
+                            <th class="p-2">Data de Entrada</th>
                         </tr>
                     </thead>
                 
                     <tbody>
                         @foreach ($produtos as $produto)
-                            <tr class="hover:bg-gray-100">
-                                <td class="p-2"></td> 
-                                <td class="p-2">{{$produto->nome}}</td>
-                                <td class="p-2"></td> 
-                                <td class="p-2">{{$produto->quantidade}}</td>
-                            </tr>
+                        <tr class="hover:bg-gray-100">
+                            <td class="p-2">{{$produto->nome}}</td>
+                            <td class="p-2">{{$produto->quantidade}}</td>
+                            <td class="p-2">{{$produto->preco}}</td>
+                            <td class="p-2">{{$produto->marca}}</td>
+                            <td class="p-2">{{$produto->fornecedor}}</td>
+                            <td class="p-2">{{$produto->categoria}}</td>
+                            <td class="p-2">{{$produto->data_de_validade}}</td>
+                            <td class="p-2">{{$produto->codigo_de_barras}}</td>
+                            <td class="p-2">{{$produto->data_de_entrada}}</td>
+                        </tr>
                         @endforeach
                     </tbody>
                 </table>
+                
                 
                 
             </div>
