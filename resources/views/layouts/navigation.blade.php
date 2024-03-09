@@ -23,6 +23,11 @@
                     <x-nav-link :href="route('almoxarifado.show')" :active="request()->routeIs('almoxarifado.show')">
                         {{ __('Produtos disponiveis') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('fornecimento.create')" :active="request()->routeIs('fornecimento.create')">
+                        {{ __('Fornecer produtos') }}
+                    </x-nav-link>
+                    
                 </div>
             </div>
 

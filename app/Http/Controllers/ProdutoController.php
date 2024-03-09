@@ -30,7 +30,6 @@ class ProdutoController extends Controller
     {
         $produto = new Produtos();
         $produto->nome = $request->nome;
-        $produto->descricao = $request->descricao;
         $produto->quantidade = $request->quantidade;
         $produto->preco = $request->preco;
         $produto->marca = $request->marca;

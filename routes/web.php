@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\FornecimentoController;
 use App\Http\Controllers\ProdutoController;
-use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -39,6 +39,12 @@ Route::middleware('auth')->group(function () {
     ]);
 
     Route::get('/almoxarifado/show',[ProdutoController::class,'show'])->name('almoxarifado.show');
+
+    Route::get('/fornecimentos/create', [FornecimentoController::class, 'create'])->name('fornecimento.create');
+    Route::post('/fornecimentos', [FornecimentoController::class, 'store'])->name('fornecimentos.store');
+
+
+
 
 });
 
